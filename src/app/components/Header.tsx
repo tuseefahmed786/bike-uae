@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Search, Menu, User, Plus } from "lucide-react";
-
+import logo from "../logo.png";
 export function Header() {
   return (
     <>
@@ -16,7 +16,7 @@ export function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
               <img
-                src="/logo.png"
+                src={logo}
                 alt="BikecUAE Logo"
                 className="w-22 h-12 object-contain rounded-lg"
               />
