@@ -115,21 +115,23 @@ export function HomePage() {
               </p>
 
               {/* Search Bar */}
-              <div className="bg-white rounded-xl p-2 shadow-xl flex items-center space-x-2">
-                <select className="bg-transparent text-neutral-900 px-4 py-3 outline-none font-medium">
-                  <option>All Categories</option>
-                  <option>Motorcycles</option>
-                  <option>Scooters</option>
-                  <option>Parts</option>
-                  <option>Accessories</option>
-                </select>
-                <div className="w-px h-8 bg-neutral-300"></div>
-                <input
-                  type="text"
-                  placeholder="Search for bikes, parts, accessories..."
-                  className="flex-1 px-4 py-3 outline-none text-neutral-900"
-                />
-                <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all flex items-center space-x-2 font-medium">
+              <div className="bg-white rounded-xl p-2 shadow-xl flex flex-col gap-2 sm:flex-row sm:items-center sm:space-x-2 w-full">
+                <div className="flex flex-col sm:flex-row w-full gap-2 sm:gap-0 sm:w-auto sm:flex-1">
+                  <select className="bg-transparent text-neutral-900 px-4 py-3 outline-none font-medium rounded-lg border border-neutral-200 w-full sm:w-auto">
+                    <option>All Categories</option>
+                    <option>Motorcycles</option>
+                    <option>Scooters</option>
+                    <option>Parts</option>
+                    <option>Accessories</option>
+                  </select>
+                  <div className="hidden sm:block w-px h-8 bg-neutral-300 mx-2"></div>
+                  <input
+                    type="text"
+                    placeholder="Search for bikes, parts, accessories..."
+                    className="flex-1 px-4 py-3 outline-none text-neutral-900 rounded-lg border border-neutral-200 w-full sm:w-auto"
+                  />
+                </div>
+                <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all flex items-center justify-center space-x-2 font-medium w-full sm:w-auto">
                   <Search className="w-5 h-5" />
                   <span>Search</span>
                 </button>
