@@ -114,8 +114,8 @@ export function BrowseListingsPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex gap-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-8">
           {/* Sidebar Filters */}
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="bg-white rounded-xl p-6 border border-neutral-200 sticky top-24">
@@ -220,15 +220,15 @@ export function BrowseListingsPage() {
           </aside>
 
           {/* Main Content */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             {/* Toolbar */}
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
               <div>
-                <h1 className="text-2xl font-bold text-neutral-900 mb-1">Browse Listings</h1>
+                <h1 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-1">Browse Listings</h1>
                 <p className="text-neutral-600">{allListings.length} results found</p>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2 bg-white border border-neutral-200 rounded-lg p-1">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4 w-full sm:w-auto">
+                <div className="flex items-center space-x-2 bg-white border border-neutral-200 rounded-lg p-1 w-full sm:w-auto">
                   <button
                     onClick={() => setViewMode("grid")}
                     className={`p-2 rounded ${
@@ -250,13 +250,13 @@ export function BrowseListingsPage() {
                     <List className="w-5 h-5" />
                   </button>
                 </div>
-                <select className="bg-white border border-neutral-200 px-4 py-2 rounded-lg outline-none focus:border-orange-500 transition-colors">
+                <select className="bg-white border border-neutral-200 px-4 py-2 rounded-lg outline-none focus:border-orange-500 transition-colors w-full sm:w-auto">
                   <option>Sort by: Newest</option>
                   <option>Price: Low to High</option>
                   <option>Price: High to Low</option>
                   <option>Most Popular</option>
                 </select>
-                <button className="lg:hidden bg-white border border-neutral-200 px-4 py-2 rounded-lg flex items-center space-x-2">
+                <button className="lg:hidden bg-white border border-neutral-200 px-4 py-2 rounded-lg flex items-center space-x-2 w-full sm:w-auto">
                   <SlidersHorizontal className="w-5 h-5" />
                   <span>Filters</span>
                 </button>
@@ -264,7 +264,7 @@ export function BrowseListingsPage() {
             </div>
 
             {/* Listings Grid */}
-            <div className={viewMode === "grid" ? "grid md:grid-cols-2 xl:grid-cols-3 gap-6" : "space-y-4"}>
+            <div className={viewMode === "grid" ? "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6" : "space-y-4"}>
               {allListings.map((listing) => (
                 <ListingCard key={listing.id} {...listing} />
               ))}

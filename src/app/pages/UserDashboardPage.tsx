@@ -73,10 +73,10 @@ export function UserDashboardPage() {
     <div className="min-h-screen bg-neutral-50">
       <Header />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-3xl font-bold text-neutral-900 mb-8">My Dashboard</h1>
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-6 sm:mb-8">My Dashboard</h1>
 
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8">
           {/* Sidebar */}
           <aside className="lg:col-span-1">
             <div className="bg-white rounded-xl border border-neutral-200 overflow-hidden sticky top-24">
