@@ -131,10 +131,13 @@ export function HomePage() {
                     className="flex-1 px-4 py-3 outline-none text-neutral-900 rounded-lg border border-neutral-200 w-full sm:w-auto"
                   />
                 </div>
+               <Link
+                  to="/browse">
                 <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all flex items-center justify-center space-x-2 font-medium w-full sm:w-auto">
                   <Search className="w-5 h-5" />
-                  <span>Search</span>
+                  <span>Searcssh</span>
                 </button>
+                </Link>
               </div>
 
               <div className="flex items-center space-x-6 mt-8">

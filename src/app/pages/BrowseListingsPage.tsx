@@ -106,7 +106,7 @@ export function BrowseListingsPage() {
                 placeholder="Search for bikes, parts, accessories..."
                 className="flex-1 bg-transparent outline-none text-neutral-900"
               />
-            </div>
+            </div>  
             <button className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-6 py-3 rounded-lg hover:shadow-lg transition-all font-medium">
               Search
             </button>
